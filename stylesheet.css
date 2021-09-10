@@ -1,0 +1,139 @@
+*{
+     margin: 0px;
+     padding: 0px;
+     box-sizing: border-box;
+     font-family: 'Montserrat', sans-serif;
+}
+body{
+     background-color: #fec107;
+     padding: 0px 10px;
+}
+.wrapper{
+     max-width: 500px;
+     width: 100%; /* width 100% kyu ki hai ? */
+     background-color: #fff;
+     margin: 20px auto;
+     padding:30px;
+     box-shadow: 1px 1px 2px rgba(0,0,0,0.125); /* box shadow kyu dee hai isne */
+}
+.wrapper .title{
+     font-size: 24px;
+     font-weight: 700;
+     margin-bottom: 25px;
+     color: #fec107;
+     text-transform: uppercase;
+     text-align: center;
+}
+.wrapper .form{
+     /* display: flex; */
+     /* flex-direction: column; */  /* yaha display flex kyu nahi kr skte */
+     width: 100%;  /* width 100% kyu ki hai */
+}
+.wrapper .input_fields{
+     display: flex;
+     margin: 15px;
+     align-items: center;
+}
+.wrapper .input_fields label{
+     width: 200px;
+     color: #757575;
+     margin-right: 10px;
+     font-size: 14px;
+}
+.wrapper .form .input_fields .input, 
+.wrapper .form .input_fields .textarea{
+     width:100%;
+     outline: none;
+     border: 1px solid #d5dbd9;
+     font-size: 15px;
+     padding:8px 10px;
+     border-radius: 3px;
+     transition: all 0.3 ease;
+}
+
+.wrapper .form .input_fields .textarea{
+     resize: none;
+     width: 100%;
+     height: 125px;
+}
+
+.wrapper .form .input_fields .custom_select{
+     position: relative;
+     width: 100%;
+     height: 37px;
+}
+.wrapper .form .input_fields .custom_select select{
+     -webkit-appearance: none; /* ye kyu kiya smj nahi aaya */
+     -moz-appearance: none;
+     appearance: none; /* isse kya hua */
+     width: 100%;
+     height: 100%;
+     padding:8px 10px;
+     border: 1px solid #d5dbd9;
+     border-radius: 3px;
+     outline: none;
+}
+.wrapper .form .input_fields .custom_select:before{
+     content: "";
+     position: absolute;
+     top: 12px;
+     right: 8px;
+     border: 8px solid;
+     border-color: red transparent transparent transparent;
+     pointer-events: none;
+}
+.wrapper .form .input_fields .input:focus ,.wrapper .form .input_fields .textarea:focus , .wrapper .form .input_fields select:focus{
+     border: 1px solid #fec107;
+}
+.wrapper .form .input_fields p{
+     font-size: 14px;
+     color: #757575;
+     width: 100%;
+}
+.wrapper .form .input_fields .check{
+     width: 15px;
+     height: 15px;
+     position: relative;
+     display: block;
+     cursor: pointer;
+}
+
+.wrapper .form .input_fields .check input[type="checkbbox"]{
+     position: relative;
+     top: 0px;
+     left: 0px;
+     opacity: 0;
+}
+
+
+.wrapper .form .input_fields .btn{
+     width: 100%;
+     padding: 8px 10px;
+     font-size: 15px;
+     border: 0;
+     background-color: #fec107;
+     color: #fff;
+     cursor: pointer;
+     border-radius: 3px;
+     outline: none;
+}
+
+.wrapper .form .input_fields:last-child{
+     margin-bottom: 0;
+}
+
+.wrapper .form .input_fields .btn:hover{
+     background: #ffd658;
+}
+
+/* **** media queries (responsiveness) ****** */
+
+@media (max-width:420px){
+     .wrapper .form .input_fields{
+          flex-direction: column;
+          align-items: flex-start;
+     }
+     .wrapper .form .input_fields label{
+          margin-bottom: 5px;
+     }
+}
